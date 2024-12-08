@@ -62,17 +62,17 @@ const MenuSection = ({ section }) => {
 
 
 
-const Menu = () => {
+const Menu = ({ isTakeout }) => {
     const [data, setData] = useState();
 
     useEffect(() => {
         async function fetchData() {
             const csvData = await readCSV();
-            const parsedData = parseData(csvData);
+            const parsedData = parseData(csvData, isTakeout);
             setData(parsedData);
         }
         fetchData();
-    }, []);
+    }, [isTakeout]);
 
     if (!data) {
         return null;

@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+.App h1 {
+    font-family: impact, impact-w01-2010, sans-serif;
+}
+
 .backgroundImage {
     background-attachment: fixed;
 }
@@ -23,10 +27,30 @@ body {
 
 .headerLabel h1 {
     font-size: 40px;
-    font-family: impact, impact-w01-2010, sans-serif;
     margin-top: 14px;
+}
+
+.nav {
+    position: absolute;
+    right: 40px;
+    top: 100px;
+    display: flex;
+    gap: 20px;
 }
 
 .backgroundOverlay {
     background-color: rgba(123, 89, 85, 0.85);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    color: rgb(251, 216, 212);
+}
+
+.content h1 {
+    font-size: 70px;
+    margin: 30px 0;
 }

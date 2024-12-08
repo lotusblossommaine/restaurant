@@ -1,5 +1,6 @@
 import Papa from 'papaparse';
 import data from './data/menu.csv';
+import { NO_SMALL_SECTIONS_FOR_DINE_IN } from './constants';
 
 export const readCSV = async () => {
     const response = await fetch(data);
@@ -19,7 +20,19 @@ export const readCSV = async () => {
     })
 }
 
-export const parseData = (data) => {
+const isShowSmallPrice = ({ smallPrice, isTakeout, sectionName }) => {
+    if (!smallPrice) {
+        return false;
+    }
+
+    if (isTakeout) {
+        return true;
+    }
+
+    return !NO_SMALL_SECTIONS_FOR_DINE_IN.includes(sectionName)
+}
+
+export const parseData = (data, isTakeout) => {
     const sections = {};
 
     data.forEach(item => {
@@ -30,7 +43,7 @@ export const parseData = (data) => {
         }
 
         const prices = [];
-        if (SmallPrice) {
+        if (isShowSmallPrice({ smallPrice: SmallPrice, isTakeout, sectionName })) {
             prices.push({ label: 'Small', amount: SmallPrice, quantity: SmallQuantity });
         }
         if (item.LargePrice) {
