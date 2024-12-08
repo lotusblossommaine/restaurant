@@ -1,0 +1,95 @@
+Section,Item,SmallPrice,LargePrice,SmallQuantity,LargeQuantity,ItemDescription
+Appetizer,Vegetable Spring Rolls,3.85,7.25,1,2,
+Appetizer,Egg Rolls,3.85,7.25,1,2,
+Appetizer,Chicken Wings,8.15,12.85,,,
+Appetizer,Chicken Fingers,6.95,11.65,6,12,
+Appetizer,Beef Teriyaki,7.45,13.65,3,6,
+Appetizer,Chicken Teriyaki,7.45,13.65,3,6,
+Appetizer,**Crab Rangoons,6.95,11.65,6,12,
+Appetizer,Cheese Wontons,6.95,11.65,6,12,
+Appetizer,Jumbo Fried Shrimp,7.45,13.65,3,6,
+Appetizer,Boneless Spare Ribs,8.65,12.85,,,
+Appetizer,Scallion Pancakes,,9.25,,,
+Appetizer,Fried Wontons,4.45,7.75,,,
+Appetizer,Pan Fried Dumplings (12),,9.25,,,
+Appetizer,Combination Appetizer,,11.25,,,"Beef Teriyaki (2), Chicken Wings (2), Chicken Fingers (2), and **Crab Rangoons (2)"
+Appetizer,French Fries,,5.85,,,
+Appetizer,Onion Rings,,5.85,,,
+Appetizer,Pu Pu Platter (for 2),,31.95,,,"Beef Teriyaki (2)
+Chicken Teriyaki (2)
+Chicken Wings
+Chicken Fingers (6)
+Boneless Spareribs
+**Crab Rangoons (4)
+Egg Rolls (2)
+
+($2.00 - Each substitution)"
+Appetizer,Pu Pu Platter (for 1),,16.75,,,($1.00 - Each substitution)
+Fried Rice,Meatless Fried Rice,5.95,8.15,,,
+Fried Rice,Vegetable Fried Rice,6.45,8.16,,,
+Fried Rice,Roast Pork Fried Rice,7.15,8.75,,,
+Fried Rice,Chicken Fried Rice,7.45,9.45,,,
+Fried Rice,Beef Fried Rice,7.45,9.45,,,
+Fried Rice,Ham Fried Rice,7.45,9.45,,,
+Fried Rice,Shrimp Fried Rice,8.15,10.15,,,
+Fried Rice,House Fried Rice,8.75,12.15,,,
+Fried Rice,Subgum Fried Rice,7.65,10.15,,,"(Choice of Pork, Chicken, or Beef)"
+Lo Mein,Vegetable Lo Mein,,11.95,,,
+Lo Mein,Roast Pork Lo Mein,,11.95,,,
+Lo Mein,Chicken Lo Mein,,,,,
+Lo Mein,Beef Lo Mein,,,,,
+Lo Mein,Shrimp Lo Mein,,,,,
+Lo Mein,House Lo Mein,,,,,
+Lo Mein,Pan Fried Noodles,,,,,
+Lo Mein,Garlic Noodles,,,,,
+Chow Mein,Meatless Chow Mein,,,,,
+Chow Mein,Vegetable Chow Mein,,,,,
+Chow Mein,Chow Mein,,,,,"(Choice of Pork, Chicken, or Beef)"
+Chow Mein,Shrimp Chow Mein,,,,,
+Chow Mein,Subgum Meatless Chow Mein,,,,,(Diced Vegetables)
+Chow Mein,Subgum Chow Mein,,,,,"(Choice of Pork, Chicken, or Beef)"
+Chow Mein,Subgum Shrimp Chow Mein,,,,,
+Chop Suey,Meatless Chop Suey,,,,,
+Chop Suey,Vegetable Chop Suey,,,,,
+Chop Suey,Chop Suey,,,,,"(Choice of Pork, Chicken, or Beef)"
+Chop Suey,Shrimp Chop Suey,,,,,
+Chop Suey,Subgum Meatless Chop Suey,,,,,(Diced Vegetables)
+Chop Suey,Subgum Chop Suey,,,,,"(Choice of Pork, Chicken, or Beef)"
+Chop Suey,Subgum Shrimp Chop Suey,,,,,
+Egg Foo Yong,Meatless Egg Foo Yong,,,,,
+Egg Foo Yong,Vegetable Egg Foo Yong,,,,,
+Egg Foo Yong,Egg Foo Yong,,,,,"(Choice of Pork, Chicken, or Beef)"
+Egg Foo Yong,Shrimp Egg Foo Yong,,,,,
+Egg Foo Yong,House Egg Foo Yong,,,,,
+Chicken,Chicken with Broccoli,,,,,
+Chicken,Chicken with Mixed Vegetables,,,,,
+Chicken,Chicken with Pea Pods,,,,,
+Chicken,Chicken with Mushroom,,,,,
+Chicken,Sweet and Sour Chicken,,,,,
+Chicken,Cashew Chicken,,,,,
+Chicken,*Kung Pao Spicy Chicken (w. Peanuts),,,,,
+Chicken,*Szechuan Spicy Chicken,,,,,
+Beef,Beef with Broccoli,,,,,
+Beef,Beef with Mixed Vegetables,,,,,
+Beef,Beef with Pea Pods,,,,,
+Beef,Beef with Mushroom,,,,,
+Beef,Beef with Green Pepper & Onion,,,,,
+Beef,Beef with Mushroom and Pea Pods,,,,,
+Beef,*Kung Pao Spicy Beef (w. Peanuts),,,,,
+Beef,*Szechuan Spicy Beef,,,,,
+Seafood,Shrimp with Broccoli,,,,,
+Seafood,Shrimp with Mixed Vegetables,,,,,
+Seafood,Shrimp with Pea Pods,,,,,
+Seafood,Shrimp with Lobster Sauce,,,,,
+Seafood,Shrimp with Mushroom,,,,,
+Seafood,Sweet and Sour Shrimp,,,,,
+Seafood,Shrimp with Mushroom and Pea Pods,,,,,
+Seafood,Scallop with Mixed Vegetables,,,,,
+Seafood,*Kung Pao Spicy Shrimp (w. Peanuts),,,,,
+Seafood,*Szechuan Spicy Shrimp,,,,,
+Healthy Selections,Steamed Mixed Vegetables,,,,,
+Healthy Selections,Steamed Chicken with Vegetables or Broccoli,,,,,
+Healthy Selections,Steamed Shrimp with Vegetables or Broccoli,,,,,
+Healthy Selections,Stir-fry Bean Sprouts,,,,,
+Healthy Selections,Pea Pods with Oyster Sauce,,,,,
+Healthy Selections,Broccoli with Oyster Sauce,,,,,

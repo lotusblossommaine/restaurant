@@ -1,0 +1,50 @@
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 960px;
+    font-family: fantasy, sans-serif;
+    color: rgb(251, 216, 212);
+    padding: 30px;
+}
+
+.menu h3 {
+    margin: 8px 0px;
+    font-family: impact, impact-w01-2010, sans-serif;
+    font-size: 25px;
+}
+
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menuItem {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.menuItemDescription {
+    font-size: 12px;
+}
+
+.prices {
+}
+
+.priceLabels {
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+.priceLabels, .prices {
+    display: flex;
+    gap: 10px;
+    text-align: right;
+
+}
+
+.price, .priceLabel {
+    width: 80px;
+}
