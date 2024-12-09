@@ -71,10 +71,13 @@
 }
 
 .menuSection.isColumn .menuItem {
-    display: block;
     width: 46%;
     text-align: center;
     color: var(--white-text-color);
+}
+
+.menuSection.isColumn.isDrinksSection .menuItem {
+    display: block;
 }
 
 .menuSection.isColumn .menuItemDescription {
@@ -82,9 +85,12 @@
 }
 
 .menuSection.isColumn .prices {
-    display: block;
     text-align: center;
     color: var(--brown-text-color);
+}
+
+.menuSection.isColumn.isDrinksSection .prices {
+    display: block;
 }
 
 .menuSection.isColumn .price {

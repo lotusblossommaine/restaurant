@@ -131,7 +131,7 @@ const MenuSection = ({ section }) => {
     }
 
     return (
-        <div className={classnames("menuSection", { isColumn: SECTIONS_WITH_COLUMNS.includes(name) })}>
+        <div className={classnames("menuSection", { isColumn: SECTIONS_WITH_COLUMNS.includes(name), isDrinksSection: name === DRINKS })}>
             {COMBO_PLATE_SECTIONS.includes(name) &&
                 <div className="luncheonSpecialsDescription">
                     {name === LUNCHEON_SPECIALS ? 'Served Daily 11:00am to 3:00pm' : <br />}
