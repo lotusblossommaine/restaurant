@@ -36,7 +36,7 @@ export const parseData = (data, isTakeout) => {
     const sections = {};
 
     data.forEach(item => {
-        const { Section, Item, SmallPrice, LargePrice, SmallQuantity, LargeQuantity, ItemDescription } = item;
+        const { Section, Item, SmallPrice, MediumPrice, LargePrice, SmallQuantity, MediumQuantity, LargeQuantity, ItemDescription } = item;
         const sectionName = PU_PU_PLATTERS.includes(Item) ? Item : Section;
 
         if (isTakeout && DRINKS_SECTION_LIST.includes(sectionName)) {
@@ -51,12 +51,15 @@ export const parseData = (data, isTakeout) => {
         if (isShowSmallPrice({ smallPrice: SmallPrice, isTakeout, sectionName })) {
             prices.push({ label: 'Small', amount: SmallPrice, quantity: SmallQuantity });
         }
-        if (item.LargePrice) {
+        if (LargePrice) {
             prices.push({ label: 'Large', amount: LargePrice, quantity: LargeQuantity });
+        }
+        if (MediumPrice) {
+            prices.push({ label: 'Medium', amount: LargePrice, quantity: MediumQuantity });
         }
 
         sections[sectionName].push({
-            name: item.Item,
+            name: Item,
             prices: prices.length > 0 ? prices : undefined,
             description: ItemDescription,
         });

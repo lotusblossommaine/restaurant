@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { readCSV, parseData } from "../utils";
 import './Menu.css';
-import { COMBO_PLATE_SECTIONS, DRINKS, DRINKS_SECTION_LIST, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SUGGESTIONS } from "../constants";
+import { COMBO_PLATE_SECTIONS, DRINKS, DRINKS_SECTION_LIST, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, MIXED_DRINKS, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SUGGESTIONS } from "../constants";
 import classnames from 'classnames';
 
 const QuantityLabel = ({ sectionName, prices, index }) => {
@@ -40,7 +40,7 @@ const Price = ({ prices, sectionName }) => {
 
 const MenuItems = ({ items, sectionName }) => {
     return (
-        <div className={classnames("menuItems", { isColumn: SECTIONS_WITH_COLUMNS.includes(sectionName) })}>
+        <div className="menuItems">
             {items.map(item => {
                 const { name, prices, description } = item;
                 return (
@@ -129,7 +129,7 @@ const MenuSection = ({ section }) => {
     }
 
     return (
-        <div className="menuSection">
+        <div className={classnames("menuSection", { isColumn: SECTIONS_WITH_COLUMNS.includes(name) })}>
             {COMBO_PLATE_SECTIONS.includes(name) &&
                 <div className="luncheonSpecialsDescription">
                     {name === LUNCHEON_SPECIALS ? 'Served Daily 11:00am to 3:00pm' : <br />}
@@ -179,7 +179,12 @@ const Menu = ({ isTakeout }) => {
             <MenuGrouping data={data} sectionList={FOOD_SECTION_LIST} />
             <MenuGrouping data={data} sectionList={COMBO_PLATE_SECTIONS} />
             <MenuGrouping data={data} sectionList={[SUGGESTIONS]} />
-            {!isTakeout && <MenuGrouping data={data} sectionList={[DRINKS]} />}
+            {!isTakeout &&
+                <>
+                    <MenuGrouping data={data} sectionList={[DRINKS]} />
+                    <MenuGrouping data={data} sectionList={[MIXED_DRINKS]} />
+                </>
+            }
         </div>
     )
 

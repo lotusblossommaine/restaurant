@@ -18,7 +18,7 @@ const COMBINATION_PLATES = 'Combination Plates';
 export const SUGGESTIONS = 'Suggestions';
 
 export const DRINKS = 'Drinks';
-const MIXED_DRINKS = 'Mixed Drinks';
+export const MIXED_DRINKS = 'Mixed Drinks';
 const BEER = 'Beer';
 const WINE = 'Wine';
 const NON_ALCOHOLIC_BEER_OPTION = 'Non-Alcoholic Beer Option';
@@ -47,4 +47,4 @@ export const SECTION_LIST = [...FOOD_SECTION_LIST, ...DRINKS_SECTION_LIST];
 export const NO_SMALL_SECTIONS_FOR_DINE_IN = [FRIED_RICE, LO_MEIN, CHOW_MEIN];
 export const SECTIONS_WITH_NO_SIZE_HEADER = [DRINKS, BEVERAGES];
 
-export const SECTIONS_WITH_COLUMNS = [DRINKS];
+export const SECTIONS_WITH_COLUMNS = [DRINKS, MIXED_DRINKS];
