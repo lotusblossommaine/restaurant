@@ -60,6 +60,10 @@
     gap: 8px;
 }
 
+.menuSection.isColumn h3 {
+    text-align: center;
+}
+
 .menuSection.isColumn .menuItems {
     flex-wrap: wrap;
     flex-direction: row;

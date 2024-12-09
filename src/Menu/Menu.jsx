@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react"
 import { readCSV, parseData } from "../utils";
 import './Menu.css';
-import { COMBO_PLATE_SECTIONS, DRINKS, DRINKS_SECTION_LIST, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, MIXED_DRINKS, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SUGGESTIONS } from "../constants";
+import { COMBO_PLATE_SECTIONS, DRINKS, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, MIXED_DRINKS, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SUGGESTIONS } from "../constants";
 import classnames from 'classnames';
 
 const QuantityLabel = ({ sectionName, prices, index }) => {
+    const isDrinksSection = sectionName === DRINKS;
+    const quantityLabels = isDrinksSection ? ['For One', 'For Two', 'For Three'] : ['S', 'M', 'L']
     if (!SECTIONS_WITH_NO_SIZE_HEADER.includes(sectionName)) {
         return null;
     }
@@ -13,7 +15,7 @@ const QuantityLabel = ({ sectionName, prices, index }) => {
         return null;
     }
 
-    return index ? '(L) ' : '(S) ';
+    return isDrinksSection ? `${quantityLabels[index]}..... ` : `(${quantityLabels[index]}) `;
 
 }
 
