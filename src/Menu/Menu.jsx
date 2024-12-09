@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { readCSV, parseData } from "../utils";
 import './Menu.css';
-import { COMBO_PLATE_SECTIONS, DRINKS, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, MIXED_DRINKS, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SUGGESTIONS } from "../constants";
+import { BEER, BEVERAGES, COMBO_PLATE_SECTIONS, DRINKS, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, MIXED_DRINKS, NON_ALCOHOLIC_BEER_OPTION, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SUGGESTIONS, WINE } from "../constants";
 import classnames from 'classnames';
 
 const QuantityLabel = ({ sectionName, prices, index }) => {
@@ -185,6 +185,8 @@ const Menu = ({ isTakeout }) => {
                 <>
                     <MenuGrouping data={data} sectionList={[DRINKS]} />
                     <MenuGrouping data={data} sectionList={[MIXED_DRINKS]} />
+                    <MenuGrouping data={data} sectionList={[BEER, WINE, NON_ALCOHOLIC_BEER_OPTION]} />
+                    <MenuGrouping data={data} sectionList={[BEVERAGES]} />
                 </>
             }
         </div>

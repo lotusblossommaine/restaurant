@@ -19,10 +19,10 @@ export const SUGGESTIONS = 'Suggestions';
 
 export const DRINKS = 'Drinks';
 export const MIXED_DRINKS = 'Mixed Drinks';
-const BEER = 'Beer';
-const WINE = 'Wine';
-const NON_ALCOHOLIC_BEER_OPTION = 'Non-Alcoholic Beer Option';
-const BEVERAGES = 'Beverages';
+export const BEER = 'Beer';
+export const WINE = 'Wine';
+export const NON_ALCOHOLIC_BEER_OPTION = 'Non-Alcoholic Beer Option';
+export const BEVERAGES = 'Beverages';
 
 export const PU_PU_PLATTERS = [PU_PU_PLATTER_FOR_TWO, PU_PU_PLATTER_FOR_ONE];
 export const COMBO_PLATE_SECTIONS = [LUNCHEON_SPECIALS, COMBINATION_PLATES];
