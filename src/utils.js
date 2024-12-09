@@ -1,6 +1,6 @@
 import Papa from 'papaparse';
 import data from './data/menu.csv';
-import { NO_SMALL_SECTIONS_FOR_DINE_IN } from './constants';
+import { DRINKS_SECTION_LIST, NO_SMALL_SECTIONS_FOR_DINE_IN, PU_PU_PLATTERS, SECTION_LIST, SECTIONS_WITH_NO_SIZE_HEADER } from './constants';
 
 export const readCSV = async () => {
     const response = await fetch(data);
@@ -36,8 +36,13 @@ export const parseData = (data, isTakeout) => {
     const sections = {};
 
     data.forEach(item => {
-        const { Section, SmallPrice, LargePrice, SmallQuantity, LargeQuantity, ItemDescription } = item;
-        const sectionName = Section;
+        const { Section, Item, SmallPrice, LargePrice, SmallQuantity, LargeQuantity, ItemDescription } = item;
+        const sectionName = PU_PU_PLATTERS.includes(Item) ? Item : Section;
+
+        if (isTakeout && DRINKS_SECTION_LIST.includes(sectionName)) {
+            return;
+        }
+
         if (!sections[sectionName]) {
             sections[sectionName] = [];
         }
@@ -55,12 +60,13 @@ export const parseData = (data, isTakeout) => {
             prices: prices.length > 0 ? prices : undefined,
             description: ItemDescription,
         });
+
     });
 
     const result = Object.entries(sections).map(([sectionName, items]) => ({
         name: sectionName,
         items,
-        hasPriceHeader: items.some(item => item.prices?.length > 1),
+        hasPriceHeader: items.some(item => item.prices?.length > 1) && !SECTIONS_WITH_NO_SIZE_HEADER.includes(sectionName),
     }));
 
     return result;

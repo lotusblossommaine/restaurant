@@ -1,9 +1,13 @@
 .menu {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 960px;
-    font-family: fantasy, sans-serif;
+    flex-direction: column;
+    gap: 60px
+}
+
+.menu h2 {
+    margin: 16px 0px;
+    font-family: impact, impact-w01-2010, sans-serif;
+    font-size: 36px;
 }
 
 .menu h3 {
@@ -12,10 +16,75 @@
     font-size: 25px;
 }
 
+.menu h4 {
+    font-size: 16px;
+}
+
+.menuGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: fantasy, sans-serif;
+    font-size: 20px;
+}
+
+.puPuPlatterItem {
+    flex-basis: 100%;
+}
+
+.puPuPlatterItem .puPuPlatterHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.puPuPlatterItem .menuItemDescription {
+    font-size: 18px;
+}
+
+.puPuPlatterDescription {
+    margin-bottom: 20px;
+}
+
+.luncheonSpecialsDescription {
+    font-size: 20px;
+}
+
+.menuSection {
+    flex: 1 1 40%;
+}
+
 .menuItems {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.menuItems.isColumn {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menuItems.isColumn .menuItem {
+    display: block;
+    width: 46%;
+    text-align: center;
+    color: var(--white-text-color);
+}
+
+.menuItems.isColumn .menuItemDescription {
+    color: var(--pink-text-color);
+}
+
+.menuItems.isColumn .prices {
+    display: block;
+    text-align: center;
+    color: var(--brown-text-color);
+}
+
+.menuItems.isColumn .price {
+    width: auto;
 }
 
 .menuItem {
@@ -25,24 +94,26 @@
 }
 
 .menuItemDescription {
-    font-size: 12px;
+    font-size: 16px;
+    color: var(--white-text-color);
 }
 
-.prices {
-}
+.prices {}
 
 .priceLabels {
     justify-content: flex-end;
     font-weight: bold;
 }
 
-.priceLabels, .prices {
+.priceLabels,
+.prices {
     display: flex;
     gap: 10px;
     text-align: right;
 
 }
 
-.price, .priceLabel {
+.price,
+.priceLabel {
     width: 80px;
 }

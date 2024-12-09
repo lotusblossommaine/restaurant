@@ -1,3 +1,11 @@
+:root {
+    --header-color: rgb(61, 44, 42);
+    --background-color: rgb(152, 152, 151);
+    --pink-text-color: rgb(251, 216, 212);
+    --white-text-color: rgb(254, 253, 253);
+    --brown-text-color: rgb(203, 202, 202);
+}
+
 body {
     margin: 0;
 }
@@ -12,17 +20,17 @@ body {
 
 .header {
     height: 150px;
-    background-color: rgb(61, 44, 42);
+    background-color: var(--header-color);
 }
 
 .headerLabel {
     width: 323px;
     height: 100px;
-    background-color: rgb(152, 152, 151);
+    background-color: var(--background-color);
     margin: 20px 0 20px 0;
     position: absolute;
     text-align: center;
-    color: rgb(61, 44, 42);
+    color: var(--header-color);
 }
 
 .headerLabel h1 {
@@ -40,6 +48,8 @@ body {
 
 .backgroundOverlay {
     background-color: rgba(123, 89, 85, 0.85);
+    max-width: 1120px;
+    margin: auto;
 }
 
 .content {
@@ -47,7 +57,7 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 30px;
-    color: rgb(251, 216, 212);
+    color: var(--pink-text-color);
 }
 
 .content h1 {
