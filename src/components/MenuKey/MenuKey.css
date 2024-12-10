@@ -1,0 +1,14 @@
+.menuKey {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+}
+
+.finePrint {
+    margin-top: 8px;
+}
+
+@media (max-width: 460px) {
+    .menuKey {
+        font-size: 10px;
+    }
+}

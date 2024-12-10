@@ -26,7 +26,7 @@ export const Price = ({ prices, sectionName }) => {
             {prices.map((price, index) => {
                 const { amount, quantity } = price;
                 return (
-                    <div className="price">
+                    <div key={`${amount}x${quantity}`} className="price">
                         {quantity && `(${quantity}) `}
                         <QuantityLabel sectionName={sectionName} prices={prices} index={index} />
                         {amount}

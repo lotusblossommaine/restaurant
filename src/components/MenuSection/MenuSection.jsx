@@ -24,7 +24,7 @@ const PuPuPlatterDescription = ({ description }) => {
             {appetizers &&
                 <div className="puPuPlatterDescription">
                     {descriptionList.map(appetizer => {
-                        return <div>{appetizer}</div>
+                        return <div key={appetizer}>{appetizer}</div>
                     })}
                 </div>
             }
@@ -39,7 +39,7 @@ const PuPuPlatterSection = ({ items, name }) => {
             {items.map(item => {
                 const { prices, description } = item;
                 return (
-                    <div className="puPuPlatterSection">
+                    <div key={name} className="puPuPlatterSection">
                         <div className="puPuPlatterHeader">
                             <h3>{name}</h3>
                             <Price prices={prices} />

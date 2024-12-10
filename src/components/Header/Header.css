@@ -1,0 +1,65 @@
+.header {
+    height: 185px;
+    background-color: var(--header-color);
+    position: relative;
+}
+
+.headerLabel {
+    width: 323px;
+    height: 100px;
+    background-color: var(--background-color);
+    margin: 20px 0 20px 0;
+    position: absolute;
+    text-align: center;
+    color: var(--header-color);
+}
+
+.headerLabel h1 {
+    font-size: 40px;
+    margin-top: 14px;
+}
+
+.navContainer {
+    max-width: 1120px;
+    margin: auto;
+    width: 100%;
+    height: 185px;
+    position: relative;
+}
+
+.nav {
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    display: flex;
+    gap: 40px;
+    color: var(--white-text-color);
+}
+
+.navItem {
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.navItem.isSelected {
+    text-decoration: underline;
+}
+
+@media (max-width: 460px) {
+    .header {
+        height: 250px;
+    }
+
+    .navContainer {
+        height: 250px;
+    }
+
+    .nav {
+        bottom: 0;
+        width: calc(100% - 40px);
+        margin: 20px 20px 35px 20px;
+        text-align: center;
+        justify-content: space-between;
+        right: auto;
+    }
+}

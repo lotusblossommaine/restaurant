@@ -1,0 +1,32 @@
+.scrollButtonsContainer {
+    display: flex;
+    gap: 30px;
+    font-size: 30px;
+    height: 100%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.scrollButton:hover {
+    background: var(--brown-bg-color);
+    color: var(--white-hover-text-color);
+}
+
+.scrollButton {
+    background: var(--brown-bg-transparent-color);
+    color: var(--white-text-color);
+    padding: 12px;
+    border-radius: 4px;
+}
+
+@media (max-width: 460px) {
+    .scrollButtonsContainer {
+        flex-direction: column;
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .scrollButton {
+        padding: 8px;
+    }
+}

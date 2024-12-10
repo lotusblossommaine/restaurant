@@ -9,7 +9,7 @@ export const MenuItems = ({ items, sectionName }) => {
             {items.map(item => {
                 const { name, prices, description } = item;
                 return (
-                    <div className={classnames("menuItem", { isSectionWithWhiteItem: SECTIONS_WITH_WHITE_ITEMS.includes(sectionName) })}>
+                    <div key={name} className={classnames("menuItem", { isSectionWithWhiteItem: SECTIONS_WITH_WHITE_ITEMS.includes(sectionName) })}>
                         <div className="menuItemDetails">
                             <div className="menuItemName">{name}</div>
                             {description && <div className="menuItemDescription">{description}</div>}

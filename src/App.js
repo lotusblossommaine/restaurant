@@ -1,38 +1,11 @@
 import { useRef, useState } from 'react';
-import classnames from 'classnames';
 
 import './App.css';
 import image from "./assets/backgroundImage.jpg";
-import Menu from './components/Menu/Menu';
-
-const MenuKey = () => {
-  return (
-    <div className="menuKey">
-      <div>* Indicates Hot & Spicy</div>
-      <div>** Indicates Imitation Crab Meat</div>
-      <div className="finePrint">
-        <div>Prices subject to change.</div>
-      </div>
-    </div>
-  )
-}
-
-const ScrollButtons = ({ luncheonSpecialsRef, drinksRef, isTakeout }) => {
-  const scrollToLunch = () => {
-    luncheonSpecialsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
-  const scrollToDrinks = () => {
-    drinksRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
-  return (
-    <div className="scrollButtonsContainer">
-      <div className="scrollButton" onClick={scrollToLunch}>Luncheon Specials</div>
-      {!isTakeout && <div className="scrollButton" onClick={scrollToDrinks}>Drinks</div>}
-    </div>
-  )
-}
+import { Menu } from './components/Menu/Menu';
+import { MenuKey } from './components/MenuKey/MenuKey';
+import { ScrollButtons } from './components/ScrollButtons/ScrollButtons';
+import { Header } from './components/Header/Header';
 
 function App() {
   const [isTakeout, setIsTakeout] = useState(false)
@@ -43,15 +16,7 @@ function App() {
   return (
     <div className="App" >
       <div style={{ backgroundImage: `url(${image})` }} className="backgroundImage">
-        <div className="header">
-          <div className="headerLabel"><h1>Lotus Blossom</h1></div>
-          <div className="navContainer">
-            <div className="nav">
-              <div className={classnames("navItem", { isSelected: !isTakeout })} onClick={() => { setIsTakeout(false) }}>Dine-in Menu</div>
-              <div className={classnames("navItem", { isSelected: isTakeout })} onClick={() => { setIsTakeout(true) }}>Takeout Menu</div>
-            </div>
-          </div>
-        </div>
+        <Header isTakeout={isTakeout} setIsTakeout={setIsTakeout} />
         <div className="backgroundOverlay">
           <div className="content">
             <div className="contentHeader">

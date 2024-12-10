@@ -16,7 +16,7 @@ import {
 import { Divider } from "../Divider/Divider";
 import { MenuGroup } from "../MenuGroup/MenuGroup";
 
-const Menu = ({ isTakeout, luncheonSpecialsRef, drinksRef }) => {
+export const Menu = ({ isTakeout, luncheonSpecialsRef, drinksRef }) => {
     const [data, setData] = useState();
 
     useEffect(() => {
@@ -53,5 +53,3 @@ const Menu = ({ isTakeout, luncheonSpecialsRef, drinksRef }) => {
         </div>
     )
 }
-
-export default Menu;

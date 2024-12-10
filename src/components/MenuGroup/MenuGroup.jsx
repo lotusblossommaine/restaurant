@@ -7,7 +7,7 @@ export const MenuGroup = ({ data, sectionList }) => {
             {sectionList.map(sectionName => {
                 const section = data.find(({ name }) => name === sectionName);
                 return (
-                    <MenuSection section={section} />
+                    <MenuSection key={sectionName} section={section} />
                 )
             })}
         </div>
