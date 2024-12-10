@@ -3,7 +3,11 @@ import classnames from 'classnames';
 
 import { readCSV, parseData } from "../utils";
 import './Menu.css';
-import { BEER, BEVERAGES, COMBO_PLATE_SECTIONS, DRINKS, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, MAJOR_SECTIONS, MIXED_DRINKS, NON_ALCOHOLIC_BEER_OPTION, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SECTIONS_WITH_WHITE_ITEMS, SUGGESTIONS, WINE } from "../constants";
+import { BEER, BEVERAGES, CENTER_ALIGNED_SECTIONS, COMBO_PLATE_SECTIONS, DRINKS, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, MAJOR_SECTIONS, MIXED_DRINKS, NON_ALCOHOLIC_BEER_OPTION, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SECTIONS_WITH_WHITE_ITEMS, SUGGESTIONS, WINE } from "../constants";
+
+const Divider = ({ ref }) => {
+    return <div ref={ref} className="divider"></div>
+}
 
 const QuantityLabel = ({ sectionName, prices, index }) => {
     const isDrinksSection = sectionName === DRINKS;
@@ -138,7 +142,7 @@ const MenuSection = ({ section }) => {
                     {name === LUNCHEON_SPECIALS ? 'Served Daily 11:00am to 3:00pm' : <br />}
                 </div>
             }
-            {MAJOR_SECTIONS.includes(name) ? <h2>{name}</h2> : <h3>{name}</h3>}
+            {MAJOR_SECTIONS.includes(name) ? <h2 className={classnames({ isCenter: CENTER_ALIGNED_SECTIONS.includes(name) })}>{name}</h2> : <h3>{name}</h3>}
             {COMBO_PLATE_SECTIONS.includes(name) && <ComboPlateDescription />}
             {hasPriceHeader && <PriceHeader />}
             <MenuItems items={items} sectionName={name} />
@@ -146,9 +150,9 @@ const MenuSection = ({ section }) => {
     )
 }
 
-const MenuGrouping = ({ data, sectionList, ref }) => {
+const MenuGrouping = ({ data, sectionList }) => {
     return (
-        <div className="menuGroup" ref={ref}>
+        <div className="menuGroup">
             {sectionList.map(sectionName => {
                 const section = data.find(({ name }) => name === sectionName);
                 return (
@@ -179,13 +183,17 @@ const Menu = ({ isTakeout, luncheonSpecialsRef, drinksRef }) => {
     return (
         <div className="menu">
             <MenuGrouping data={data} sectionList={FOOD_SECTION_LIST} />
-            <MenuGrouping ref={luncheonSpecialsRef} data={data} sectionList={COMBO_PLATE_SECTIONS} />
+            <Divider ref={luncheonSpecialsRef} />
+            <MenuGrouping data={data} sectionList={COMBO_PLATE_SECTIONS} />
+            <Divider />
             <MenuGrouping data={data} sectionList={[SUGGESTIONS]} />
             {!isTakeout &&
                 <>
-                    <MenuGrouping ref={drinksRef} data={data} sectionList={[DRINKS]} />
+                    <Divider ref={drinksRef} />
+                    <MenuGrouping data={data} sectionList={[DRINKS]} />
                     <MenuGrouping data={data} sectionList={[MIXED_DRINKS]} />
                     <MenuGrouping data={data} sectionList={[BEER, WINE, NON_ALCOHOLIC_BEER_OPTION]} />
+                    <Divider />
                     <MenuGrouping data={data} sectionList={[BEVERAGES]} />
                 </>
             }

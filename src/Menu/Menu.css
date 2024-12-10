@@ -1,3 +1,8 @@
+.divider {
+    border: 1px dashed var(--white-text-color);
+    width: 100%;
+}
+
 .menu {
     display: flex;
     flex-direction: column;
@@ -60,7 +65,12 @@
     gap: 8px;
 }
 
-.menuSection.isColumn h2, .menuSection.isColumn h3 {
+.menuSection.isColumn h2,
+.menuSection.isColumn h3 {
+    text-align: center;
+}
+
+h2.isCenter {
     text-align: center;
 }
 
