@@ -6,6 +6,7 @@ import { Menu } from './components/Menu/Menu';
 import { MenuKey } from './components/MenuKey/MenuKey';
 import { ScrollButtons } from './components/ScrollButtons/ScrollButtons';
 import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   const [isTakeout, setIsTakeout] = useState(false)
@@ -27,6 +28,8 @@ function App() {
             <Menu isTakeout={isTakeout} luncheonSpecialsRef={luncheonSpecialsRef} drinksRef={drinksRef} />
           </div>
         </div>
+        <Footer />
+
       </div>
     </div>
   );
