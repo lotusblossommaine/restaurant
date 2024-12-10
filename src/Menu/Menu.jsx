@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import { readCSV, parseData } from "../utils";
 import './Menu.css';
-import { BEER, BEVERAGES, COMBO_PLATE_SECTIONS, DRINKS, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, MIXED_DRINKS, NON_ALCOHOLIC_BEER_OPTION, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SUGGESTIONS, WINE } from "../constants";
+import { BEER, BEVERAGES, COMBO_PLATE_SECTIONS, DRINKS, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, MIXED_DRINKS, NON_ALCOHOLIC_BEER_OPTION, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SECTIONS_WITH_WHITE_ITEMS, SUGGESTIONS, WINE } from "../constants";
 
 const QuantityLabel = ({ sectionName, prices, index }) => {
     const isDrinksSection = sectionName === DRINKS;
@@ -47,7 +47,7 @@ const MenuItems = ({ items, sectionName }) => {
             {items.map(item => {
                 const { name, prices, description } = item;
                 return (
-                    <div className="menuItem">
+                    <div className={classnames("menuItem", { isSectionWithWhiteItem: SECTIONS_WITH_WHITE_ITEMS.includes(sectionName) })}>
                         <div className="menuItemDetails">
                             <div className="menuItemName">{name}</div>
                             {description && <div className="menuItemDescription">{description}</div>}

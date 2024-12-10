@@ -103,9 +103,17 @@
     gap: 20px;
 }
 
+.menuItem.isSectionWithWhiteItem .menuItemName {
+    color: var(--white-text-color)
+}
+
 .menuItemDescription {
     font-size: 16px;
-    color: var(--white-text-color);
+    color: var(--brown-text-color);
+}
+
+.menuItem.isSectionWithWhiteItem .menuItemDescription {
+    color: var(--pink-text-color)
 }
 
 .prices {}
