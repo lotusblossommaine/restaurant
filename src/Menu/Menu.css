@@ -134,19 +134,24 @@
     }
 
     .menu h4 {
-        font-size: 14px;
+        font-size: 12px;
     }
 
 
     .puPuPlatterItem .menuItemDescription {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .menuItemDescription {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .menuGroup {
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .price,
+    .priceLabel {
+        width: 60px;
     }
 }
