@@ -1,12 +1,18 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
     color: var(--pink-text-color);
-    gap: 150px;
-    padding: 60px 100px;
     background-color: rgba(61, 44, 42, 0.5);
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footerContent {
+    max-width: 1120px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 0;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
 .dayOfWeekHours {
