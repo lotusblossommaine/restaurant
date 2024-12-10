@@ -19,8 +19,9 @@ body {
 }
 
 .header {
-    height: 150px;
+    height: 185px;
     background-color: var(--header-color);
+    position: relative;
 }
 
 .headerLabel {
@@ -41,14 +42,14 @@ body {
 .nav {
     position: absolute;
     right: 40px;
-    top: 100px;
+    bottom: 20px;
     display: flex;
     gap: 20px;
+    color: var(--white-text-color);
 }
 
 .navItem {
     cursor: pointer;
-    color: var(--white-text-color);
     font-size: 32px;
 }
 
@@ -77,6 +78,19 @@ body {
 
 
 @media (max-width: 460px) {
+    .header {
+        height: 250px;
+    }
+
+    .nav {
+        bottom: 0;
+        width: calc(100% - 40px);
+        margin: 20px 20px 35px 20px;
+        text-align: center;
+        justify-content: space-between;
+        right: auto;
+    }
+
     .content h1 {
         font-size: 50px;
     }
