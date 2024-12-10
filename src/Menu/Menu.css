@@ -24,7 +24,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    font-family: fantasy, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
 
@@ -148,10 +148,5 @@
 
     .menuGroup {
         font-size: 12px;
-    }
-
-    .price,
-    .priceLabel {
-        width: 60px;
     }
 }
