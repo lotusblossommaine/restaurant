@@ -73,6 +73,15 @@ body {
     margin: auto;
 }
 
+.menuKey {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+}
+
+.finePrint {
+    margin-top: 8px;
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -103,6 +112,10 @@ body {
         text-align: center;
         justify-content: space-between;
         right: auto;
+    }
+
+    .menuKey {
+        font-size: 10px;
     }
 
     .content h1 {

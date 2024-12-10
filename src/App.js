@@ -5,6 +5,18 @@ import './App.css';
 import image from "./assets/backgroundImage.jpg";
 import Menu from './Menu/Menu';
 
+const MenuKey = () => {
+  return (
+    <div className="menuKey">
+      <div>* Indicates Hot & Spicy</div>
+      <div>** Indicates Imitation Crab Meat</div>
+      <div className="finePrint">
+        <div>Prices subject to change.</div>
+      </div>
+    </div>
+  )
+}
+
 function App() {
   const [isTakeout, setIsTakeout] = useState(false);
 
@@ -23,6 +35,7 @@ function App() {
         <div className="backgroundOverlay">
           <div className="content">
             <h1>{isTakeout ? 'TAKEOUT MENU' : 'DINE-IN MENU'}</h1>
+            <MenuKey />
             <Menu isTakeout={isTakeout} />
           </div>
         </div>
