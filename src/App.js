@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import classnames from 'classnames';
 
 import './App.css';
@@ -17,8 +17,28 @@ const MenuKey = () => {
   )
 }
 
+const ScrollButtons = ({ luncheonSpecialsRef, drinksRef }) => {
+  const scrollToLunch = () => {
+    luncheonSpecialsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const scrollToDrinks = () => {
+    drinksRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  return (
+    <div className="scrollButtonsContainer">
+      <div className="scrollButton" onClick={scrollToLunch}>Luncheon Specials</div>
+      <div className="scrollButton" onClick={scrollToDrinks}>Drinks</div>
+    </div>
+  )
+}
+
 function App() {
-  const [isTakeout, setIsTakeout] = useState(false);
+  const [isTakeout, setIsTakeout] = useState(false)
+
+  const luncheonSpecialsRef = useRef(null);
+  const drinksRef = useRef(null);
 
   return (
     <div className="App" >
@@ -34,9 +54,12 @@ function App() {
         </div>
         <div className="backgroundOverlay">
           <div className="content">
-            <h1>{isTakeout ? 'TAKEOUT MENU' : 'DINE-IN MENU'}</h1>
+            <div className="contentHeader">
+              <h1>{isTakeout ? 'TAKEOUT MENU' : 'DINE-IN MENU'}</h1>
+              <ScrollButtons luncheonSpecialsRef={luncheonSpecialsRef} drinksRef={drinksRef} />
+            </div>
             <MenuKey />
-            <Menu isTakeout={isTakeout} />
+            <Menu isTakeout={isTakeout} luncheonSpecialsRef={luncheonSpecialsRef} drinksRef={drinksRef} />
           </div>
         </div>
       </div>

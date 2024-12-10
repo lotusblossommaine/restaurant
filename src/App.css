@@ -4,6 +4,9 @@
     --pink-text-color: rgb(251, 216, 212);
     --white-text-color: rgb(254, 253, 253);
     --brown-text-color: rgb(203, 202, 202);
+    --brown-bg-color: rgba(50, 50, 50);
+    --brown-bg-transparent-color: rgba(50, 50, 50, 0.69);
+    --white-hover-text-color: rgb(203, 202, 202)
 }
 
 body {
@@ -90,9 +93,35 @@ body {
     color: var(--pink-text-color);
 }
 
+.contentHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
 .content h1 {
     font-size: 70px;
     margin: 30px 0;
+}
+
+.scrollButtonsContainer {
+    display: flex;
+    gap: 30px;
+    font-size: 30px;
+    height: 100%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.scrollButton:hover {
+    background: var(--brown-bg-color);
+    color: var(--white-hover-text-color);
+}
+
+.scrollButton {
+    background: var(--brown-bg-transparent-color);
+    color: var(--white-text-color);
+    padding: 12px;
+    border-radius: 4px;
 }
 
 
@@ -120,5 +149,15 @@ body {
 
     .content h1 {
         font-size: 50px;
+    }
+
+    .scrollButtonsContainer {
+        flex-direction: column;
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .scrollButton {
+        padding: 8px;
     }
 }
