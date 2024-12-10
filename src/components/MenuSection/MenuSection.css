@@ -40,3 +40,9 @@ h4 {
 .menuSection.isColumn h3 {
     text-align: center;
 }
+
+@media (max-width: 460px) {
+    .luncheonSpecialsDescription {
+        font-size: 16px;
+    }
+}
