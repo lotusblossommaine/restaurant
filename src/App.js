@@ -17,7 +17,7 @@ const MenuKey = () => {
   )
 }
 
-const ScrollButtons = ({ luncheonSpecialsRef, drinksRef }) => {
+const ScrollButtons = ({ luncheonSpecialsRef, drinksRef, isTakeout }) => {
   const scrollToLunch = () => {
     luncheonSpecialsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
@@ -29,7 +29,7 @@ const ScrollButtons = ({ luncheonSpecialsRef, drinksRef }) => {
   return (
     <div className="scrollButtonsContainer">
       <div className="scrollButton" onClick={scrollToLunch}>Luncheon Specials</div>
-      <div className="scrollButton" onClick={scrollToDrinks}>Drinks</div>
+      {!isTakeout && <div className="scrollButton" onClick={scrollToDrinks}>Drinks</div>}
     </div>
   )
 }
@@ -56,7 +56,7 @@ function App() {
           <div className="content">
             <div className="contentHeader">
               <h1>{isTakeout ? 'TAKEOUT MENU' : 'DINE-IN MENU'}</h1>
-              <ScrollButtons luncheonSpecialsRef={luncheonSpecialsRef} drinksRef={drinksRef} />
+              <ScrollButtons luncheonSpecialsRef={luncheonSpecialsRef} drinksRef={drinksRef} isTakeout={isTakeout} />
             </div>
             <MenuKey />
             <Menu isTakeout={isTakeout} luncheonSpecialsRef={luncheonSpecialsRef} drinksRef={drinksRef} />
