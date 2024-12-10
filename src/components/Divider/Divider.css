@@ -1,0 +1,4 @@
+.divider {
+    border: 1px dashed var(--white-text-color);
+    width: 100%;
+}

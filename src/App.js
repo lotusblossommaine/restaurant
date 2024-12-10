@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import './App.css';
 import image from "./assets/backgroundImage.jpg";
-import Menu from './Menu/Menu';
+import Menu from './components/Menu/Menu';
 
 const MenuKey = () => {
   return (
