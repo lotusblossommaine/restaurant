@@ -1,6 +1,6 @@
 import Papa from 'papaparse';
 import data from './data/menu.csv';
-import { DRINKS_SECTION_LIST, NO_SMALL_SECTIONS_FOR_DINE_IN, PU_PU_PLATTERS, SECTION_LIST, SECTIONS_WITH_NO_SIZE_HEADER } from './constants';
+import { DRINKS_SECTION_LIST, NO_SMALL_SECTIONS_FOR_DINE_IN, PU_PU_PLATTERS, SECTIONS_WITH_NO_SIZE_HEADER } from './constants';
 
 export const readCSV = async () => {
     const response = await fetch(data);
