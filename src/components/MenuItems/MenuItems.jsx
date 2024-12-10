@@ -1,6 +1,7 @@
 import classnames from 'classnames';
 import { SECTIONS_WITH_WHITE_ITEMS } from "../../constants";
 import { Price } from '../Price/Price';
+import "./MenuItems.css";
 
 export const MenuItems = ({ items, sectionName }) => {
     return (

@@ -1,0 +1,12 @@
+.priceLabels {
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+.priceLabels,
+.prices {
+    display: flex;
+    gap: 10px;
+    text-align: right;
+
+}

@@ -1,4 +1,5 @@
 import { DRINKS, SECTIONS_WITH_NO_SIZE_HEADER } from "../../constants";
+import "./Price.css";
 
 const QuantityLabel = ({ sectionName, prices, index }) => {
     const isDrinksSection = sectionName === DRINKS;

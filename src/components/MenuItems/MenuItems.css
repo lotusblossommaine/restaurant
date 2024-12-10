@@ -1,0 +1,15 @@
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menuItem {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.menuItem.isSectionWithWhiteItem .menuItemName {
+    color: var(--white-text-color)
+}

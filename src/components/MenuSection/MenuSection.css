@@ -1,0 +1,42 @@
+h2 {
+    margin: 16px 0px;
+    font-family: impact, impact-w01-2010, sans-serif;
+    font-size: 36px;
+}
+
+h3 {
+    margin: 8px 0px;
+    font-family: impact, impact-w01-2010, sans-serif;
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+.puPuPlatterItem {
+    flex-basis: 100%;
+}
+
+.puPuPlatterHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.puPuPlatterDescription {
+    margin-bottom: 20px;
+}
+
+.luncheonSpecialsDescription {
+    font-size: 20px;
+}
+
+.menuSection {
+    flex: 1 1 40%;
+}
+
+.menuSection.isColumn h2,
+.menuSection.isColumn h3 {
+    text-align: center;
+}

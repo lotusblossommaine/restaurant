@@ -11,6 +11,7 @@ import {
 import { Price } from '../Price/Price';
 import { PriceHeader } from '../PriceHeader/PriceHeader';
 import { MenuItems } from '../MenuItems/MenuItems';
+import "./MenuSection.css";
 
 const PuPuPlatterDescription = ({ description }) => {
     const substitutionCostIndex = description.indexOf("($");
