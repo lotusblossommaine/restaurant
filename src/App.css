@@ -46,6 +46,16 @@ body {
     gap: 20px;
 }
 
+.navItem {
+    cursor: pointer;
+    color: var(--white-text-color);
+    font-size: 32px;
+}
+
+.navItem.isSelected {
+    text-decoration: underline;
+}
+
 .backgroundOverlay {
     background-color: rgba(123, 89, 85, 0.85);
     max-width: 1120px;

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import classnames from 'classnames';
+
 import './App.css';
 import image from "./assets/backgroundImage.jpg";
 import Menu from './Menu/Menu';
@@ -12,8 +14,8 @@ function App() {
         <div className="header">
           <div className="headerLabel"><h1>Lotus Blossom</h1></div>
           <div className="nav">
-            <button onClick={() => { setIsTakeout(false) }}>Dine-in Menu</button>
-            <button onClick={() => { setIsTakeout(true) }}>Takeout Menu</button>
+            <div className={classnames("navItem", { isSelected: !isTakeout })} onClick={() => { setIsTakeout(false) }}>Dine-in Menu</div>
+            <div className={classnames("navItem", { isSelected: isTakeout })} onClick={() => { setIsTakeout(true) }}>Takeout Menu</div>
           </div>
         </div>
         <div className="backgroundOverlay">

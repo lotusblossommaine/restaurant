@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react"
+import classnames from 'classnames';
+
 import { readCSV, parseData } from "../utils";
 import './Menu.css';
 import { BEER, BEVERAGES, COMBO_PLATE_SECTIONS, DRINKS, FOOD_SECTION_LIST, LUNCHEON_SPECIALS, MIXED_DRINKS, NON_ALCOHOLIC_BEER_OPTION, PU_PU_PLATTERS, SECTIONS_WITH_COLUMNS, SECTIONS_WITH_NO_SIZE_HEADER, SUGGESTIONS, WINE } from "../constants";
-import classnames from 'classnames';
 
 const QuantityLabel = ({ sectionName, prices, index }) => {
     const isDrinksSection = sectionName === DRINKS;
