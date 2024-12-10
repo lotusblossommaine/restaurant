@@ -8,3 +8,9 @@
     font-family: impact, impact-w01-2010, sans-serif;
     font-size: 25px;
 }
+
+@media (max-width: 460px) {
+    .footerTile {
+        flex-basis: 100%;
+    }
+}
